@@ -1,51 +1,81 @@
-<div class="container">
-  <form id="contact">
-    <h3>Quick Contact</h3>
-    <h4>Contact us today, and get a reply within 24 hours!</h4>
-    <fieldset>
-      <input
-        placeholder="Your name"
-        type="text"
-        tabindex="1"
-        required
-        autofocus
-      />
-    </fieldset>
-    <fieldset>
-      <textarea
-        placeholder="Type your Message Here...."
-        tabindex="5"
-        required
-      ></textarea>
-    </fieldset>
-    <fieldset>
-      <button
-        name="submit"
-        type="submit"
-        id="contact-submit"
-        data-submit="...Sending"
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PKRXF87D");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PKRXF87D"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="container">
+      <form id="contact">
+        <h3>Quick Contact</h3>
+        <h4>Contact us today, and get a reply within 24 hours!</h4>
+        <fieldset>
+          <input
+            placeholder="Your name"
+            type="text"
+            tabindex="1"
+            required
+            autofocus
+          />
+        </fieldset>
+        <fieldset>
+          <textarea
+            placeholder="Type your Message Here...."
+            tabindex="5"
+            required
+          ></textarea>
+        </fieldset>
+        <fieldset>
+          <button
+            name="submit"
+            type="submit"
+            id="contact-submit"
+            data-submit="...Sending"
+          >
+            Submit
+          </button>
+        </fieldset>
+      </form>
+      <!-- Hidden thank you message -->
+      <strong
+        id="thank-you-message"
+        class="form-submission-text"
+        style="display: none; color: green"
       >
-        Submit
-      </button>
-    </fieldset>
-  </form>
-  <!-- Hidden thank you message -->
-  <strong
-    id="thank-you-message"
-    class="form-submission-text"
-    style="display: none; color: green"
-  >
-    Thank you for contacting us! We will get back to you shortly.
-  </strong>
-</div>
+        Thank you for contacting us! We will get back to you shortly.
+      </strong>
+    </div>
 
-<script>
-  const form = document.getElementById("contact");
-  const thankYouMessage = document.getElementById("thank-you-message");
+    <script>
+      const form = document.getElementById("contact");
+      const thankYouMessage = document.getElementById("thank-you-message");
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form submission
-    thankYouMessage.style.display = "block"; // Show the thank you message
-    form.reset(); // Optional: Reset the form fields
-  });
-</script>
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent form submission
+        thankYouMessage.style.display = "block"; // Show the thank you message
+        form.reset(); // Optional: Reset the form fields
+      });
+    </script>
+  </body>
+</html>
