@@ -27,7 +27,7 @@
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="container">
-      <form id="contact">
+      <form id="contact-form">
         <h3>Quick Contact</h3>
         <h4>Contact us today, and get a reply within 24 hours!</h4>
         <fieldset>
@@ -59,7 +59,7 @@
       </form>
       <!-- Hidden thank you message -->
       <strong
-        id="thank-you-message"
+        id="contact-us"
         class="form-submission-text"
         style="display: none; color: green"
       >
@@ -68,8 +68,8 @@
     </div>
 
     <script>
-      const form = document.getElementById("contact");
-      const thankYouMessage = document.getElementById("thank-you-message");
+      const form = document.getElementById("contact-form");
+      const thankYouMessage = document.getElementById("contact-us");
 
       form.addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent form submission
