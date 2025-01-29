@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PKRXF87D");
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Page</title>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".post").forEach((post) => {
+          const title = post.querySelector("h2").textContent;
+          const category = post.dataset.category;
+          const likes = parseInt(post.dataset.likes, 10);
+          const comments = parseInt(post.dataset.comments, 10);
+
+          dataLayer.push({
+            event: "blogPostView",
+            postTitle: title,
+            category: category,
+            likes: likes,
+            comments: comments,
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PKRXF87D"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <h1>Blog Posts</h1>
+
+    <div
+      class="post"
+      data-category="Technology"
+      data-likes="120"
+      data-comments="45"
+    >
+      <h2>Latest Tech Trends</h2>
+      <p>Category: Technology</p>
+      <p>Likes: <span class="likes">120</span></p>
+      <p>Comments: <span class="comments">45</span></p>
+    </div>
+
+    <div class="post" data-category="CRO" data-likes="80" data-comments="30">
+      <h2>CRO Tips</h2>
+      <p>Category: CRO</p>
+      <p>Likes: <span class="likes">80</span></p>
+      <p>Comments: <span class="comments">30</span></p>
+    </div>
+
+    <div class="post" data-category="SEO" data-likes="95" data-comments="50">
+      <h2>Smart SEO Strategies</h2>
+      <p>Category: SEO</p>
+      <p>Likes: <span class="likes">95</span></p>
+      <p>Comments: <span class="comments">50</span></p>
+    </div>
+  </body>
+</html>
